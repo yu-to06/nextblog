@@ -1,0 +1,16 @@
+{
+  "posts": [
+    {
+      "id": "next.js13 blog",
+      "title": "next.js13 Learning",
+      "content": "やや難しい",
+      "createdAt": "2024/05/01 "
+    },
+    {
+      "id": "Json-Server",
+      "title": "Using Json-Server",
+      "content": "本当はsupabaseやfirebaseなどのDBを使用したほうがいいのですが、一旦動作確認のためにJson-Serverに投稿内容を直書きしています。",
+      "createdAt": "2024/05/05 "
+    }
+  ]
+}
