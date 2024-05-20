@@ -11,6 +11,12 @@
       "title": "Using Json-Server",
       "content": "本当はsupabaseやfirebaseなどのDBを使用したほうがいいのですが、一旦動作確認のためにJson-Serverに投稿内容を直書きしています。",
       "createdAt": "2024/05/05 "
+    },
+    {
+      "id": "revalidate-next.js13",
+      "title": "revalidation",
+      "content": "ISRの方法を学びました",
+      "createdAt": "2024/05/20 "
     }
   ]
 }
