@@ -37,6 +37,21 @@ export const createArticle = async (
   return newArticles;
 };
 
+export const deleteArticle = async (id: string): Promise<Article> => {
+  const res = await fetch(`http://localhost:3001/posts/${id}`, {
+    method: "DELETE",
+  });
+
+  if (!res.ok) {
+    throw new Error("Error is occured by blogAPI.ts line 6");
+  }
+
+  await new Promise((resolve) => setTimeout(resolve, 1000));
+
+  const deleteArticle = await res.json();
+  return deleteArticle;
+};
+
 export const getDetailArticle = async (id: string): Promise<Article> => {
   // ISR
   const res = await fetch(`http://localhost:3001/posts/${id}`, {

@@ -1,6 +1,7 @@
 import React from "react";
 import Image from "next/image";
 import {getDetailArticle} from "../../../blogAPI";
+import DeleteButton from "@/components/DeleteButton";
 
 // 型の分割をすると以下のようになる
 // type Params = {
@@ -27,6 +28,10 @@ const Article = async ({params}: {params: {id: string}}) => {
       </h1>
       <div className='text-lg leading-relaxed text-justify'>
         <p>{detailArticle.content}</p>
+      </div>
+
+      <div className='text-right mt-3'>
+        <DeleteButton id={detailArticle.id} />
       </div>
     </div>
   );
