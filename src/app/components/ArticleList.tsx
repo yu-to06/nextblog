@@ -8,9 +8,15 @@ type ArticleListProps = {
 const ArticleList = ({articles}: ArticleListProps) => {
   return (
     <div>
-      {articles.map((article) => (
-        <ArticleCard article={article} key={article.id} />
-      ))}
+      {articles
+        .slice()
+        .sort(
+          (a, b) =>
+            new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime()
+        )
+        .map((article) => (
+          <ArticleCard article={article} key={article.id} />
+        ))}
     </div>
   );
 };
